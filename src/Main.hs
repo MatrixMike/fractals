@@ -21,7 +21,7 @@ h :: Int
 h = 500
 
 -- Complex constants for the Julia set rendering.
-fixC1, fixC2, fixC3, fixC4 :: C
+fixC1, fixC2, fixC3, fixC4, fixC5 :: C
 fixC1 = (-1.037) :+ 0.17
 
 fixC2 = (-0.52) :+ 0.57
@@ -29,9 +29,11 @@ fixC2 = (-0.52) :+ 0.57
 fixC3 = 0.295 :+ 0.55
 
 fixC4 = (-0.624) :+ 0.435
+-- notice the effect of negating a parameter  
+fixC5 = (-0.3) :+ (-0.3)              --(0.3) :+ 0.3
 
 juliaConstants :: [(Int, C)]
-juliaConstants = [(1, fixC1), (2, fixC2), (3, fixC3), (4, fixC4)]
+juliaConstants = [(1, fixC1), (2, fixC2), (3, fixC3), (4, fixC4), (5, fixC5)]
 
 --iterate f x == [x, f x, f (f x), ...]
 -- in mandel the seed is fixed at 0 
