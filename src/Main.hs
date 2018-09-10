@@ -3,6 +3,7 @@
   -Wall -fwarn-tabs -fno-warn-type-defaults -fno-warn-unused-do-bind #-}
 
 import Codec.Picture
+
 -- The package juicypixels needs to have been installed.
 -- try cabal install juicypixels
 -- https://hackage.haskell.org/package/JuicyPixels-3.2.8.3
@@ -29,8 +30,9 @@ fixC2 = (-0.52) :+ 0.57
 fixC3 = 0.295 :+ 0.55
 
 fixC4 = (-0.624) :+ 0.435
+
 -- notice the effect of negating a parameter  
-fixC5 = (-0.3) :+ (-0.3)              --(0.3) :+ 0.3
+fixC5 = (-0.3) :+ (-0.3) --(0.3) :+ 0.3
 
 juliaConstants :: [(Int, C)]
 juliaConstants = [(1, fixC1), (2, fixC2), (3, fixC3), (4, fixC4), (5, fixC5)]
